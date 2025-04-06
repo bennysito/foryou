@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(-50px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #e84a5f;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .love-button {
+            background-color: #e84a5f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .love-button:hover {
+            background-color: #d0404d;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="letterTitle">Ablihi</h1>
+        <p id="loveMessage">Dear Blands,  
+            Happy first monthsary baby, paspas ra kaayo ang panahon pero every moment I have spent with you since then has been worth it. I am lucky to have you by my side. I'm excited for all the months ahead, to continue growing together and making even more special memories. Thank you for making this month unforgettable. Cheers to many more, I love you!
+            
+            With all my love, jamesgwapo123
+        </p>
+        <button class="love-button" onclick="revealMessage()">E click</button>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const loveMessage = document.getElementById('loveMessage');
+            const letterTitle = document.getElementById('letterTitle');
+            
+            loveMessage.style.display = 'block'; // Reveal the message
+            letterTitle.innerHTML = 'Dear Blands,'; // Change the title to "Dear Blands"
+        }
+    </script>
+
+</body>
+</html>
